@@ -4,6 +4,9 @@ import { Route } from 'react-router-dom';
 import { Mac } from './components/Mac';
 import { Iphone } from './components/Iphone';
 import { Ipad } from './components/Ipad';
+import { Watch } from './components/Watch';
+import { Tv } from './components/Tv';
+import { Music } from './components/Music';
 import './App.css';
 import macInfo from './macInfo.json';
 
@@ -17,9 +20,9 @@ function App() {
       <Route path='/imac' render={props => <Mac {...props} appleData={appleData} /> } />
       <Route path='/ipad' render={props => <Ipad {...props} appleData={appleData} /> } />
       <Route path='/iphone' render={props => <Iphone {...props} appleData={appleData} /> } />
-      <Route path='/watch' />
-      <Route path='/tv' />
-      <Route path='/music' />
+      <Route path='/watch' render={props => <Watch {...props} appleData={appleData} /> } />
+      <Route path='/tv' render={props => <Tv {...props} appleData={appleData} /> } />
+      <Route path='/music' render={props => <Music {...props} appleData={appleData} /> } />
       <Route path='support'/>
 
     </div>
